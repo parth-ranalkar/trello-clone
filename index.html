@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylsheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Trello Clone</title>
 </head>
 <body>
+    <header>
+        <div class="header-flex">
+            <span id="sidebar-button"><i class="fa fa-list"></i></span>
+            <h1 id="title">Trello Cards</h1>
+        </div>
+    </header>
+    <div id="sidebar" class="sidenav">
+        <span id="sidebar-close">&times;</span>
+        <p class="is-title">Boards</p>
+        <ul id="boards-list">
+            <!-- Boards will be listed here -->
+        </ul>
+        <div class="flex-col">
+            <input type="text" id="add-board-text" name="add-board" placeholder="Add Board...">
+            <button id="add-board-button">Add Board</button>
+        </div>
+    </div>
+
+    <div id="card-context-menu" class="context-menu">
+        <!-- Right-click context menu on cards. -->
+        <ul>
+            <li id="card-context-menu-delete">Delete</li>
+            <li id="card-context-menu-clear">Clear</li>
+            <li id="card-context-menu-duplicate">Duplicate</li>
+        </ul>
+    </div>
+    <div class="container" id="main-container">
+        <div id="cards-container">
+            <div id="add-card">
+                <input maxlength="128" type="text" name="add-card" id="add-card-text" placeholder="Add Card..." autofocus>
+                <button id="add-card-button" class="plus-button">+</button>
+            </div>
+        </div>
+    </div>
+
     
 </body>
 </html>
